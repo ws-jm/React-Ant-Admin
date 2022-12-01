@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <button onclick="handleHideBox()">按钮</button>
+    <button onclick="handleIsBoxHide()">是否隐藏</button>
+    <div id="box">看见我了</div>
+    <div id="res"></div>
+  </div>
+</body>
+<script>
+  var dom = document.getElementById('box')
+  var res = document.getElementById('res')
+  function handleHideBox() {
+    dom.style.display = 'none'
+  }
+
+  function handleIsBoxHide() {
+    var isDisplay = window.getComputedStyle(dom).display === 'none'
+    res.innerHTML = isDisplay
+  }
+</script>
+</html>
